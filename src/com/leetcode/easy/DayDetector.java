@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 
  * @author prabhuddha.bhashitha
- * Derive the day of the week(Sunday,Monday...) from a given date 10-11-1978
+ * Derive the day of the week(Sunday,Monday...) for a given date e.g. 10-11-1978
  * 
  * Known date will be given as 01-01-1972 -> Sunday
  */
