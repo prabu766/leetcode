@@ -23,6 +23,16 @@ import java.util.Set;
  * 
  * So 19 is a happy number
  * @author prabhuddha.bhashitha
+ * 
+ * Logic:
+ * 1. Get the square of remainder of n by 10 (modulo operation) and add to the sum
+ * 2. set the new number to the divider
+ * Continue above two steps until n >0
+ * 
+ * Repeat the same steps to considering sum as the new n. 
+ * 
+ * The trick here to identify, some numbers will have an infinite loop. HashSet is used here for that. 
+ * In above steps, if we found a number which was in a previous step, that means this will go to a loop and it'll never return true.
  *
  */
 public class HappyNumber {
