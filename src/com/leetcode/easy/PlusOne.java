@@ -34,36 +34,28 @@ public class PlusOne {
 	
 	public static void main(String[] args) {
 		
-		int[] resultArr = new int[]{9};
+		int[] resultArr = new int[]{1,2,9};
 		resultArr = plusOne(resultArr);
 		for(int a : resultArr) {
 			System.out.print(a);
 		}
 	}
-	
 	public static int[] plusOne(int[] digits) {
-        int remainder =0;
-        for(int index= digits.length-1;index >=0;--index) {
-        	int digit = digits[index];
-        	if(remainder >0 || (index == (digits.length-1))) {
-        		if(index == (digits.length-1)){
-        			++digit;
-        		}
-        		digit += remainder;
-        		if(digit==10) {
-        			remainder = 1;
-        			digit =0;
-        		}else {
-        			remainder = 0;
-        		}
-        	}
-        	digits[index] =digit;
-        }
-        if(remainder ==1) {
-        	int[] resultArr = Arrays.copyOf(digits, digits.length+1);
-        	resultArr[0]=1;
-        	return resultArr;
-        }
-        return digits;
-    }
+		for (int i = digits.length - 1; i >= 0; i--) {
+			if (digits[i] < 9) {
+				digits[i]++;
+				return digits;
+			}
+			digits[i] = 0;
+		}
+
+		//code reached to this line means all digits have become 0, just need to add 1 to the first
+		digits = new int[digits.length + 1];
+		digits[0] = 1;
+		return digits;
+	}
+	
+	
+	
+	
 }
