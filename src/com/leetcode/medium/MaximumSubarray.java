@@ -29,7 +29,7 @@ public class MaximumSubarray {
 		//int[] intArr = { 1 };
 		// int[] intArr = { -2, 1 };
 		System.out.println(maxSubArrayKadanesAlgo(intArr));
-		System.out.println(maxSubArrayBruteForce2(intArr));
+		System.out.println(maxSubArrayBruteForce(intArr));
 	}
 
 	/**
