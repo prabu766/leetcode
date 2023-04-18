@@ -37,11 +37,11 @@ import java.util.Set;
  */
 public class HappyNumber {
 
-	private Set<Integer> numberSet = new HashSet<>();
+	private static Set<Integer> numberSet = new HashSet<>();
 	public static void main(String[] args) {
-		System.out.println(new HappyNumber().isHappy(116));
+		System.out.println(isHappy(116));
 	}
-	public boolean isHappy(int n) {
+	public static boolean isHappy(int n) {
 		int sum = getNext(n);
 		if(numberSet.contains(sum)) {
 			return false;
