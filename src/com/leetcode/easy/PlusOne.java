@@ -1,5 +1,7 @@
 package com.leetcode.easy;
 
+import java.util.Arrays;
+
 /**
  * You are given a large integer represented as an integer array digits, where
  * each digits[i] is the ith digit of the integer. The digits are ordered from
@@ -34,10 +36,9 @@ public class PlusOne {
 		
 		int[] resultArr = new int[]{1,2,9};
 		resultArr = plusOne(resultArr);
-		for(int a : resultArr) {
-			System.out.print(a);
-		}
+		System.out.println(Arrays.toString(resultArr));
 	}
+	
 	public static int[] plusOne(int[] digits) {
 		for (int i = digits.length - 1; i >= 0; i--) {
 			if (digits[i] < 9) {

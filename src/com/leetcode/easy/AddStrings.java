@@ -1,7 +1,5 @@
 package com.leetcode.easy;
 
-import java.util.Arrays;
-
 /**
  * 
  * Given two non-negative integers, num1 and num2 represented as string, return
