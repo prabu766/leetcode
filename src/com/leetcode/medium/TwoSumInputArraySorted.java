@@ -38,6 +38,15 @@ public class TwoSumInputArraySorted {
 		getTwoSumIndices(numbers, target);
 	}
 	
+	/**
+	 * This method has used two pointer technique as below
+	 * 1. Place two pointers at left and right corners
+	 * 2. Add the values and if value is greater than the target, bring the right pointer to the left
+	 * 3. If value is less than the target, bring the left pointer to the right
+	 * @param numbers
+	 * @param target
+	 * @return
+	 */
 	public static int[] getTwoSumIndices(int[] numbers, int target) {
 		
 		int[] indices = new int[2];
