@@ -1,5 +1,7 @@
 package com.leetcode.easy;
 
+import java.util.Arrays;
+
 /**
  * Given an array of integers nums and an integer target, return indices of the
  * two numbers such that they add up to target. You may assume that each input
@@ -16,9 +18,13 @@ public class TwoSum {
 
 	public static void main(String[] args) {
 
-		int[] numbersArr = new int[] { -2, 7, 11, 15 };
+		int[] numbersArr = new int[] { 2, 7, 11, 15 };
 		int target = 13;
-		numbersArr = twoSum(numbersArr, target);
+//		numbersArr = twoSum(numbersArr, target);
+//		for (int num : numbersArr) {
+//			System.out.print(num + " ");
+//		}
+		numbersArr = twoSumUsingTwoPointer(numbersArr, target);
 		for (int num : numbersArr) {
 			System.out.print(num + " ");
 		}
@@ -55,6 +61,24 @@ public class TwoSum {
 		}
 
 		return null;
+	}
+	
+	public static int[] twoSumUsingTwoPointer(int[] nums, int target) {
+		Arrays.sort(nums);
+		int left=0;
+		int right= nums.length-1;
+		
+		while(left < right) {
+			int sum = nums[left]+ nums[right];
+			if(sum > target) {
+				--right;
+			}else if(sum < target) {
+				++left;
+			}else {
+				break;
+			}
+		}
+		return new int[] { left, right };
 	}
 
 }
