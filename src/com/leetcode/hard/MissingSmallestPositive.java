@@ -21,7 +21,7 @@ public class MissingSmallestPositive {
 
 	public static void main(String[] args) {
 
-		int[] numArr = { 5, 4, 3, 1, 2, 9 };
+		int[] numArr = { 1, 2, 3, 4, 5,6,7, 13, 12, 9, 10, 11 };
 		// int[] numArr = {7,8,9,11,12};
 		// int[] numArr = {2,1};
 		System.out.println(firstMissingPositive(numArr));
@@ -34,7 +34,10 @@ public class MissingSmallestPositive {
 		for (int num : nums) {
 			if (num == smallestPositive) {
 				++smallestPositive;
+			}else if(num > smallestPositive) {
+				break;
 			}
+			System.out.println(num);
 		}
 		return smallestPositive;
 	}
