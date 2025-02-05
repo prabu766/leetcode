@@ -41,7 +41,8 @@ public class MergeIntervals {
 	
 	/**
 	 * Logic
-	 * 1. Sort two dimentional array. Because we need to compare the last digit of each interval
+	 * 1. Sort two dimensional array. Because we need to compare the last digit of each interval
+	 * 2. Go one 
 	 * @param intervals
 	 * @return
 	 */
